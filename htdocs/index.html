@@ -1,0 +1,141 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Simple contacts</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+</head> 
+<body> 
+
+<div data-role="page" id="welcome">
+
+    <div data-role="header" data-position="fixed">
+        <h1>Welcome</h1>
+    </div>
+
+    <div data-role="content">   
+        <h2>Welcome to this session about jQuery-Mobile and Sencha Touch</h2>
+        <p>
+            This simple application demonstrates the different concepts used in jQuery-Mobile to realize a mobile web application.
+        </p>
+        <h3>Credits and Attribution</h3>
+        <p>
+            The used iconsset for this demonstration is the free version of <a href="http://www.glyphish.com/">Glyphish</a> 
+        </p>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar" class="nav-glyphish">
+            <ul>
+                <li><a href="#welcome" data-icon="custom" class="ui-btn-active ui-state-persist welcome">Welcome</a></li>
+                <li><a href="#list" data-icon="custom" class="firstname">Firstname</a></li>
+                <li><a href="#list" data-icon="custom" class="lastname">Lastname</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<div data-role="page" id="list">
+
+    <div data-role="header" data-position="fixed">
+        <h1>Contacts</h1>
+        <a href="#add" data-theme="b" data-icon="plus" class="ui-btn-right">Add</a>
+    </div>
+
+    <ul data-role="listview" data-autodividers="true">
+        <li><a href="#view" data-rel="dialog">John Doe</a></li>
+        <li><a href="audi.html">Jane Doe</a></li>
+        <li><a href="bmw.html">Doctor Who</a></li>
+    </ul>
+
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar" class="nav-glyphish">
+            <ul>
+                <li><a href="#welcome" data-icon="custom" class="welcome">Welcome</a></li>
+                <li><a href="#list" data-icon="custom" class="firstname">Firstname</a></li>
+                <li><a href="#list" data-icon="custom" class="lastname">Lastname</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<div data-role="page" id="view">
+
+    <div data-role="header">
+        <h1>Detail View</h1>
+    </div>
+
+    <div data-role="content">   
+        <h2 class="contact-name">John Doe</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td><b>EMail: </b></td>
+                    <td class="contact-mail">john.doe@example.com</td>
+                </tr>
+                <tr>
+                    <td><b>Telephone: </b></td>
+                    <td class="contact-phone">+49 123 456 789</td>
+                </tr>
+                <tr>
+                    <td><b>Address: </b></td>
+                    <td class="contact-address">
+                        Somewhere Street 42<br />
+                        12345 Anywhere<br />
+                        Someland
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="#" data-rel="back" data-theme="b" data-role="button">Dismiss</a>
+    </div>
+</div>
+
+<div data-role="page" id="add">
+    <div data-role="header" data-position="fixed">
+        <a href="#" data-icon="arrow-l" data-rel="back">Back</a>
+        <h1>Add Contact</h1>
+    </div>
+
+    <form>
+        <fieldset data-role="fieldcontain">
+            <h2>Name</h2>
+            <label for="contact-firstname">Firstname:</label>
+            <input type="text" name="contact-firstname" id="contact-firstname" value="" placeholder="John"/>
+            <label for="contact-lastname">Lastname:</label>
+            <input type="text" name="contact-lastname" id="contact-lastname" value="" placeholder="Doe"/>
+        </fieldset>
+        <fieldset data-role="fieldcontain">
+            <h2>Contact</h2>
+            <label for="contact-mail">EMail:</label>
+            <input type="text" name="contact-mail" id="contact-mail" value="" placeholder="john.doe@example.com"/>
+            <label for="contact-phone">Phone:</label>
+            <input type="text" name="contact-phone" id="contact-phone" value="" placeholder="+49 123 456 789"/>
+        </fieldset>
+        <fieldset data-role="fieldcontain">
+            <h2>Address</h2>
+            <label for="contact-mail">Address:</label>
+            <textarea name="contact-address" id="contact-address" placeholder="Someaddress"></textarea>
+        </fieldset>
+    </form>
+    <a href="#" class="contact-save" data-rel="back" data-role="button" data-theme="b">Save Contact</a>
+
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar" class="nav-glyphish">
+            <ul>
+                <li><a href="#welcome" data-icon="custom" class="welcome">Welcome</a></li>
+                <li><a href="#list" data-icon="custom" class="firstname">Firstname</a></li>
+                <li><a href="#list" data-icon="custom" class="lastname">Lastname</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
